@@ -9,6 +9,7 @@ import {
 
 import Product from './components/Product'
 import { LINKS } from './constants';
+import styles from './components/Product/styles.module.scss';
 
 export default function Products() {
   const { path, url } = useRouteMatch();
@@ -16,7 +17,7 @@ export default function Products() {
     <Grid columns={3} tabletColumns={1} phoneColumns={1}>
       <GridCell colSpan={1}>
         <List>
-          <Text type="subtitle-1">Categories</Text>
+          <Text type="subtitle-1" className={styles.productCategories}>Categories</Text>
           {
             LINKS.map(({ name, path, icon }, index) =>
               <div key={name}>

@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+@import '~@react-md/tabs/dist/mixins';
+@import '~@react-md/theme/dist/mixins';
+
+.link {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.tabs {
+  @include rmd-theme(background-color, primary);
+  @include rmd-tabs-theme-update-var(active, inherit);
+  @include rmd-tabs-theme-update-var(
+    inactive,
+    $rmd-theme-secondary-text-on-dark-color
+  );
+  @include rmd-tabs-theme-update-var(indicator-color, rmd-theme-var(secondary));
+
+  button {
+    padding: 0;
+  }
+
+  span {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.textContainer {
+  padding: 2rem 0;
+}
