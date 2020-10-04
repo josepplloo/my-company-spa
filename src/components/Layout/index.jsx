@@ -3,20 +3,21 @@ import { Link, useLocation } from 'react-router-dom';
 import { Configuration, TabsManager, Tabs } from 'react-md';
 
 import { PATHS, TAB_INDEX } from './constants';
+import styles from './styles.module.scss';
 
 function Layout({ children }) {
   const tabs = [
     {
-      children: <Link to={PATHS.HOME}>HOME</Link>
+      children: <Link className={styles.link} to={PATHS.HOME}>HOME</Link>
     },
     {
-      children: <Link to={PATHS.PRODUCTS}>PRODUCTS</Link>
+      children: <Link className={styles.link} to={PATHS.PRODUCTS}>PRODUCTS</Link>
     },
     {
-      children: <Link to={PATHS.CLIENTS}>CLIENTS</Link>
+      children: <Link className={styles.link} to={PATHS.CLIENTS}>CLIENTS</Link>
     },
     {
-      children: <Link to={PATHS.CONTACT}>CONTACT</Link>
+      children: <Link className={styles.link} to={PATHS.CONTACT}>CONTACT</Link>
     }
   ];
 
@@ -31,7 +32,7 @@ function Layout({ children }) {
   return (
     <Configuration >
       <TabsManager tabs={tabs} tabsId="basic-usage-tabs" activeIndex={tabIndex} onActiveIndexChange={setTabIndex}>
-        <Tabs padded={true} />
+        <Tabs padded={true} className={styles.tabs} />
         {children}
       </TabsManager>
     </Configuration>

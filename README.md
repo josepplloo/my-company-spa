@@ -1,8 +1,21 @@
-# ReactMD and Create React App Example
+# My Company Single Page App
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app) using
-[react-md](https://react-md.dev) as the component library.
+![app](./public/app.png)
+
+---
+
+## About this project
+
+- ⚛️ This project was bootstrapped with
+[Create React App and react-MD](https://github.com/mlaursen/react-md/tree/master/examples/create-react-app).
+
+- 🎨 The project uses [react-md](https://react-md.dev) as the component library and Sass for the additional styling.
+
+- 🗄 The data was served using [My JSON server](https://my-json-server.typicode.com/) from my own repository's [db.json](./db.json) file.
+
+ - 🔗 The routing was made through [React Router](https://reactrouter.com/web/guides/quick-start).
+
+ - ⚓️ The project use [React Hooks](https://reactjs.org/docs/hooks-intro.html) to manage the state in the App.
 
 ## What's Included
 
@@ -21,126 +34,30 @@ following features:
   - uses [react-router-dom](https://www.npmjs.com/package/react-router-dom) as
     the routing library
 
-## How to Use
+## Run this repo in development mode
 
-Since this example is not a separate repo, this example will need to be manually
-downloaded instead of using `create-react-app`:
-
+- 🐑 Clone this repo
 ```bash
-curl https://codeload.github.com/mlaursen/react-md/tar.gz/master | tar -xz --strip=2 react-md-master/examples/create-react-app
-cd create-react-app
+  git clone https://github.com/josepplloo/my-company-spa.git
 ```
-
-Install it and run:
-
-```sh
-npm install
-npm run dev
-# or
-yarn
-yarn dev
+- 📊 Install dependencies
 ```
-
-Finally, initialize the git repo and create your first commit:
-
-```sh
-git init
-git add .
-git commit -m "Initial commit"
+  cd my-company-spa && npm i
 ```
+- 🏁 Start the server
+```
+npm start
+```
+- 💻 Now can view the website in your browser at http://localhost:3000/
 
-## Learn More
+## Wall of Shame
 
-To learn more about react-md and Next.js, take a look at the following
-resources:
+Several things I would've liked to do but I didn't have enough time. 
 
-- [react-md Documentation](https://react-md.dev)
-- [Configuring your Layout](https://react-md.dev/guides/configuring-your-layout)
-- [Create React App Documentation](https://create-react-app.dev/)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
-
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here:
-https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Add proptypes and TypeScript for type cheking.
+- Deepen in `react-md` to get more familiar with the library and customize the theming and components.
+- Add more unit tests.
+- A global state management hook.
+- Ask for the design spects.
+- Add eslint configuration.
+- Add post CSS config to avoid camel case styles in SASS files. 

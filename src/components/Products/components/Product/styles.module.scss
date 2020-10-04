@@ -1,8 +1,5 @@
-.image {
-  width: 150px;
-}
-
 @import '../../../../scss/variables';
+
 .image {
   width: 150px;
 }
@@ -14,6 +11,7 @@
 
 .cardContainer {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .cardHeader {
@@ -32,15 +30,12 @@
 }
 
 .productCategories {
-  color: $rmd-theme-primary;
+  color: $rmd-theme-secondary;
 }
 
 .productInfo span {
   font-weight: bold;
-}
-
-.productInfoContainer {
-  display: flex;
+  margin-right: 0.5rem;
 }
 
 .productInfoContainer {
@@ -50,4 +45,14 @@
 
 .productDescription {
   margin-bottom: 0.8rem;
+}
+
+.iconWrapper {
+  background-color: $rmd-theme-secondary;
+  border-radius: 50%;
+  display: flex;
+  padding: 0.5rem;
+  svg {
+    fill: $rmd-theme-tertiary;
+  }
 }
