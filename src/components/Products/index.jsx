@@ -6,17 +6,17 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
+
 import Product from './components/Product'
 import { LINKS } from './constants';
 
 export default function Products() {
-  let { path, url } = useRouteMatch();
-
+  const { path, url } = useRouteMatch();
   return (
     <Grid columns={3} tabletColumns={1} phoneColumns={1}>
-      <GridCell >
+      <GridCell colSpan={1}>
         <List>
-          <Text type="subtitle-1">Products</Text>
+          <Text type="subtitle-1">Categories</Text>
           {
             LINKS.map(({ name, path, icon }, index) =>
               <div key={name}>
@@ -28,7 +28,7 @@ export default function Products() {
           }
         </List>
       </GridCell>
-      <GridCell>
+      <GridCell colSpan={2}>
         <Switch>
           <Route exact path={path}>
             <Product />
