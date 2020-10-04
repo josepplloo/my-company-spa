@@ -1,3 +1,7 @@
+@import '../../scss/variables';
+@import '~@react-md/tabs/dist/mixins';
+@import '~@react-md/theme/dist/mixins';
+
 .link {
   align-items: center;
   display: flex;
@@ -6,6 +10,14 @@
 }
 
 .tabs {
+  @include rmd-theme(background-color, primary);
+  @include rmd-tabs-theme-update-var(active, inherit);
+  @include rmd-tabs-theme-update-var(
+    inactive,
+    $rmd-theme-secondary-text-on-dark-color
+  );
+  @include rmd-tabs-theme-update-var(indicator-color, rmd-theme-var(secondary));
+
   button {
     padding: 0;
   }
