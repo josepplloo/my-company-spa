@@ -1,53 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { PATHS, TAB_INDEX } from './constants';
+
 import {
-  Layout as RMDLayout,
   Configuration,
-  useLayoutNavigation,
-  ArrowDropDownSVGIcon,
-  CheckBoxSVGIcon,
-  FileDownloadSVGIcon,
-  KeyboardArrowDownSVGIcon,
-  KeyboardArrowLeftSVGIcon,
-  KeyboardArrowRightSVGIcon,
-  MenuSVGIcon,
-  NotificationsSVGIcon,
-  RadioButtonCheckedSVGIcon,
-  RemoveRedEyeSVGIcon,
-  ArrowUpwardSVGIcon,
-  CheckSVGIcon,
+  TabsManager,
+  Tabs,
 } from 'react-md';
 
-import navItems from './navItems';
-
-const icons = {
-  back: <KeyboardArrowLeftSVGIcon />,
-  checkbox: <CheckBoxSVGIcon />,
-  dropdown: <ArrowDropDownSVGIcon />,
-  download: <FileDownloadSVGIcon />,
-  expander: <KeyboardArrowDownSVGIcon />,
-  forward: <KeyboardArrowRightSVGIcon />,
-  menu: <MenuSVGIcon />,
-  notification: <NotificationsSVGIcon />,
-  radio: <RadioButtonCheckedSVGIcon />,
-  password: <RemoveRedEyeSVGIcon />,
-  selected: <CheckSVGIcon />,
-  sort: <ArrowUpwardSVGIcon />,
-};
-
 export default function Layout({ children }) {
+  const tabs = [
+    {
+      children: <Link to={PATHS.HOME}>HOME</Link>
+    },
+    {
+      children: <Link to={PATHS.PRODUCTS}>PRODUCTS</Link>
+    },
+    {
+      children: <Link to={PATHS.CLIENTS}>CLIENTS</Link>
+    },
+    {
+      children: <Link to={PATHS.CONTACT}>CONTACT</Link>
+    }
+  ];
+
+  const [tabIndex, setTabIndex] = useState(1);
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    const newPathName = `/${pathname.split('/')[1]}`
+    setTabIndex(TAB_INDEX[newPathName]);
+  }, [pathname])
+
+
   return (
-    <Configuration icons={icons}>
-      <RMDLayout
-        tabletLayout="toggleable"
-        landscapeTabletLayout="toggleable"
-        desktopLayout="toggleable"
-        largeDesktopLayout="full-height"
-        treeProps={useLayoutNavigation(navItems, pathname, Link)}
-      >
+    <Configuration >
+      <TabsManager tabs={tabs} tabsId="basic-usage-tabs" activeIndex={tabIndex} onActiveIndexChange={setTabIndex}>
+        <Tabs padded={true} />
         {children}
-      </RMDLayout>
+      </TabsManager>
     </Configuration>
   );
 }
