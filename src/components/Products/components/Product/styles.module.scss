@@ -30,7 +30,7 @@
 }
 
 .productCategories {
-  color: $rmd-theme-primary;
+  color: $rmd-theme-secondary;
 }
 
 .productInfo span {
@@ -45,4 +45,14 @@
 
 .productDescription {
   margin-bottom: 0.8rem;
+}
+
+.iconWrapper {
+  background-color: $rmd-theme-secondary;
+  border-radius: 50%;
+  display: flex;
+  padding: 0.5rem;
+  svg {
+    fill: $rmd-theme-tertiary;
+  }
 }
