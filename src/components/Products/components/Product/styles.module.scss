@@ -1,8 +1,5 @@
-.image {
-  width: 150px;
-}
-
 @import '../../../../scss/variables';
+
 .image {
   width: 150px;
 }
@@ -14,6 +11,7 @@
 
 .cardContainer {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .cardHeader {
@@ -37,10 +35,7 @@
 
 .productInfo span {
   font-weight: bold;
-}
-
-.productInfoContainer {
-  display: flex;
+  margin-right: 0.5rem;
 }
 
 .productInfoContainer {

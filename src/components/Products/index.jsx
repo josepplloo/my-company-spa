@@ -33,7 +33,7 @@ export default function Products() {
           <Route exact path={path}>
             <Product />
           </Route>
-          <Route path={`${path}/:productId`}>
+          <Route path={`${path}/:categoryId`}>
             <Product />
           </Route>
         </Switch>
