@@ -1,3 +1,53 @@
 .image {
   width: 150px;
 }
+
+@import '../../../../scss/variables';
+.image {
+  width: 150px;
+}
+
+.imageContainer {
+  justify-self: center;
+  align-self: center;
+}
+
+.cardContainer {
+  margin-bottom: 1rem;
+}
+
+.cardHeader {
+  padding: 1rem 1rem 0;;
+}
+
+.cardContent  {
+  padding: 0;
+}
+
+.productCounter {
+  margin-bottom: 1rem;
+  span {
+    font-weight: bold;
+  }
+}
+
+.productCategories {
+  color: $rmd-theme-primary;
+}
+
+.productInfo span {
+  font-weight: bold;
+}
+
+.productInfoContainer {
+  display: flex;
+}
+
+.productInfoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.productDescription {
+  margin-bottom: 0.8rem;
+}
