@@ -1,12 +1,6 @@
 import React from 'react';
-import { HomeSVGIcon, TvSVGIcon } from 'react-md';
+import { HomeSVGIcon, FaceSVGIcon, CallSVGIcon, ComputerSVGIcon, FormatListBulletedSVGIcon, BuildSVGIcon, FolderSVGIcon } from 'react-md';
 
-/**
- * Note: The `parentId` **must** be defaulted to `null` for the navigation tree
- * to render correctly since this uses the @react-md/tree package behind the
- * scenes. Each item that has a `parentId` set to `null` will appear at the root
- * level of your navigation tree.
- */
 function createRoute(pathname, children, leftAddon, parentId = null) {
   return {
     itemId: pathname,
@@ -19,7 +13,12 @@ function createRoute(pathname, children, leftAddon, parentId = null) {
 
 const navItems = {
   '/': createRoute('/', 'Home', <HomeSVGIcon />),
-  '/route-1': createRoute('/route-1', 'Route 1', <TvSVGIcon />),
+  '/clients': createRoute('/clients', 'Clients', <FaceSVGIcon />),
+  '/contact': createRoute('/contact', 'Contact', <CallSVGIcon />),
+  '/products': createRoute('/products', 'Products', <FormatListBulletedSVGIcon />),
+  '/tech': createRoute('/products/tech', 'Tech', <ComputerSVGIcon />, '/products'),
+  '/services': createRoute('/products/services', 'Services', <BuildSVGIcon />, '/products'),
+  '/office': createRoute('/products/office', 'Office', <FolderSVGIcon />, '/products'),
 };
 
 export default navItems;
