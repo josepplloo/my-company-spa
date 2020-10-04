@@ -40,10 +40,10 @@ export default function Layout({ children }) {
   return (
     <Configuration icons={icons}>
       <RMDLayout
-        tabletLayout="temporary"
-        landscapeTabletLayout="temporary"
-        desktopLayout="temporary"
-        largeDesktopLayout="temporary"
+        tabletLayout="toggleable"
+        landscapeTabletLayout="toggleable"
+        desktopLayout="toggleable"
+        largeDesktopLayout="full-height"
         treeProps={useLayoutNavigation(navItems, pathname, Link)}
       >
         {children}
