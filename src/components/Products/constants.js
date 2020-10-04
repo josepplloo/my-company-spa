@@ -25,4 +25,3 @@ export const LINKS = [
 ];
 
 export const API_URL = 'https://my-json-server.typicode.com/josepplloo/my-company-spa/db';
-export const NOT_FOUND = 404
