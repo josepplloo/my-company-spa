@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Configuration, TabsManager, Tabs } from 'react-md';
+
 import { PATHS, TAB_INDEX } from './constants';
 
-import {
-  Configuration,
-  TabsManager,
-  Tabs,
-} from 'react-md';
-
-export default function Layout({ children }) {
+function Layout({ children }) {
   const tabs = [
     {
       children: <Link to={PATHS.HOME}>HOME</Link>
@@ -24,14 +20,13 @@ export default function Layout({ children }) {
     }
   ];
 
-  const [tabIndex, setTabIndex] = useState(1);
+  const [tabIndex, setTabIndex] = useState(0);
   const { pathname } = useLocation();
 
   useEffect(() => {
     const newPathName = `/${pathname.split('/')[1]}`
     setTabIndex(TAB_INDEX[newPathName]);
   }, [pathname])
-
 
   return (
     <Configuration >
@@ -42,3 +37,5 @@ export default function Layout({ children }) {
     </Configuration>
   );
 }
+
+export default Layout;
