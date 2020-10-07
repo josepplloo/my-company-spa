@@ -15,7 +15,7 @@
 
  - 🔗 The routing was made through [React Router](https://reactrouter.com/web/guides/quick-start).
 
- - ⚓️ The project use [React Hooks](https://reactjs.org/docs/hooks-intro.html) to manage the state in the App.
+ - ⚓️ The project uses [React Hooks](https://reactjs.org/docs/hooks-intro.html) to manage the state in the App.
 
 ## What's Included
 
@@ -54,10 +54,10 @@ npm start
 
 Several things I would've liked to do but I didn't have enough time. 
 
-- Add proptypes and TypeScript for type cheking.
+- Add proptypes and TypeScript for type checking.
 - Deepen in `react-md` to get more familiar with the library and customize the theming and components.
 - Add more unit tests.
 - A global state management hook.
-- Ask for the design spects.
+- Ask for the design specs.
 - Add eslint configuration.
 - Add post CSS config to avoid camel case styles in SASS files. 
