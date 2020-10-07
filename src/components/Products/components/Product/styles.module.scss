@@ -1,7 +1,8 @@
 @import '../../../../scss/variables';
 
 .image {
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
 }
 
 .imageContainer {
