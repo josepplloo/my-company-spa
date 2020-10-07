@@ -1,6 +1,6 @@
 {
   "name": "my-company-spa",
-  "homepage": "./my-company-spa",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "scripts": {
